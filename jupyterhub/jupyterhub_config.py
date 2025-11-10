@@ -49,6 +49,7 @@ c.JupyterHub.db_url = f"sqlite:///{db_file}"
 c.JupyterHub.cleanup_servers = False
 
 # externally managed traefik
+c.TraefikProxy.traefik_entrypoint = "https"
 c.TraefikProxy.should_start = False
 c.JupyterHub.proxy_class = "traefik_file"
 
