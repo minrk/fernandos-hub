@@ -47,8 +47,8 @@ address = "localhost:9001"
 [certificatesResolvers.letsencrypt.acme]
 email = "minrk@berkeley.edu"
 storage = "acme.json"
-# staging while we work this out
-caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+# staging for testing
+# caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
 [certificatesResolvers.letsencrypt.acme.tlsChallenge]
 
 [providers]
