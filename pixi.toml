@@ -10,7 +10,8 @@ version = "0.1.0"
 PIXI_HOME = "/opt/jupyterhub/"
 
 [tasks]
-
+update-daemons = "sudo cp -v LaunchDaemons/*.plist /Library/LaunchDaemons/"
+reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.hub.*.plist; do echo reloading $f; sudo launchctl unload $f; sudo launchctl load $f; done'", depends-on = ["update-daemons"] }
 
 [dependencies]
 python = "3.12.*"
