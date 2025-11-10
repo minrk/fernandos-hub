@@ -11,14 +11,17 @@ PIXI_HOME = "/opt/jupyterhub/"
 
 [tasks]
 update-daemons = "sudo cp -v LaunchDaemons/*.plist /Library/LaunchDaemons/"
-reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.hub.*.plist; do echo reloading $f; sudo launchctl unload $f; sudo launchctl load $f; done'", depends-on = ["update-daemons"] }
+reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.hub.*.plist; do echo reloading $f; sudo launchctl unload $f; sudo launchctl load $f; done'", depends-on = [
+  "update-daemons",
+] }
+setup-logs = "sudo mkdir -p /Library/Logs/jupyterhub/traefik; sudo chown -R _traefik:admin /Library/Logs/jupyterhub/traefik"
 
 [dependencies]
-python = "3.12.*"
 
 # shared dependencies across hub and user
 # not 'default' because we might have tasks
 [feature.common.dependencies]
+python = "3.12.*"
 jupyterhub-base = "5.4.*"
 
 # Hub environment

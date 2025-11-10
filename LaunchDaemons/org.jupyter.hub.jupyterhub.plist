@@ -5,18 +5,16 @@
 	<key>KeepAlive</key>
 	<true/>
 	<key>Label</key>
-	<string>org.jupyter.hub.traefik</string>
+	<string>org.jupyter.hub.jupyterhub</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/opt/jupyterhub/.pixi/envs/hub/bin/traefik</string>
-		<string>--configfile</string>
-		<string>/opt/jupyterhub/traefik/traefik.toml</string>
+		<string>/opt/jupyterhub/.pixi/envs/hub/bin/jupyterhub</string>
 	</array>
 	<key>StandardErrorPath</key>
-	<string>/Library/Logs/jupyterhub/traefik/traefik.err.log</string>
+	<string>/Library/Logs/jupyterhub/jupyterhub.log</string>
 	<key>StandardOutPath</key>
-	<string>/Library/Logs/jupyterhub/traefik/traefik.log</string>
+	<string>/Library/Logs/jupyterhub/jupyterhub.out.log</string>
 	<key>WorkingDirectory</key>
-	<string>/opt/jupyterhub/traefik</string>
+	<string>/opt/jupyterhub/jupyterhub</string>
 </dict>
 </plist>

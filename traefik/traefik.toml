@@ -5,7 +5,7 @@
 [api]
 
 [log]
-level = "INFO"
+level = "DEBUG"
 noColor = true
 
 # log errors, which could be proxy errors
@@ -42,7 +42,7 @@ options = "default"
 idleTimeout = "10m"
 
 [entryPoints.auth_api]
-address = "localhost:9001"
+address = "localhost:8099"
 
 [certificatesResolvers.letsencrypt.acme]
 email = "minrk@berkeley.edu"
