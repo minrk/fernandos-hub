@@ -6,8 +6,6 @@
 	<string>org.jupyter.hub.traefik</string>
 	<key>KeepAlive</key>
 	<true/>
-	<key>Program</key>
-	<string>/opt/homebrew/bin/traefik</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/opt/homebrew/bin/traefik</string>
