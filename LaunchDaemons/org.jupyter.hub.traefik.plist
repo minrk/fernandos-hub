@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.jupyter.hub.traefik</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Program</key>
+	<string>/opt/homebrew/bin/traefik</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/bin/traefik</string>
+		<string>--configfile</string>
+		<string>/opt/jupyterhub/traefik/traefik.toml</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/opt/jupyterhub/traefik</string>
+	<key>WatchPaths</key>
+	<array>
+		<string>/opt/jupyterhub/traefik/traefik.toml</string>
+	</array>
+	<key>StandardOutPath</key>
+    <string>/Library/Logs/jupyterhub/traefik.log</string>
+	<key>StandardErrorPath</key>
+    <string>/Library/Logs/jupyterhub/traefik.err.log</string>
+</dict>
+</plist>

@@ -29,3 +29,9 @@ repos:
     rev: v0.9.3
     hooks:
       - id: taplo-format
+  - repo: https://github.com/homebysix/pre-commit-macadmin
+    rev: v1.21.1
+    hooks:
+      - id: check-plists
+      - id: format-xml-plist
+  

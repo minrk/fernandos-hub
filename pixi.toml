@@ -5,7 +5,12 @@ name = "fernando-hub"
 platforms = ["osx-arm64"]
 version = "0.1.0"
 
+[activation.env]
+# clone this repo into /opt/jupyterhub
+PIXI_HOME = "/opt/jupyterhub/"
+
 [tasks]
+
 
 [dependencies]
 python = "3.12.*"

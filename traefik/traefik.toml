@@ -1,0 +1,59 @@
+# traefik.toml static config file template
+# dynamic config (e.g. TLS) goes dynamic/
+
+# enable API
+[api]
+
+[log]
+level = "INFO"
+noColor = true
+
+# log errors, which could be proxy errors
+[accessLog]
+format = "json"
+
+[accessLog.filters]
+statusCodes = ["500-999"]
+
+[accessLog.fields.headers.names]
+Authorization = "redact"
+Cookie = "redact"
+Set-Cookie = "redact"
+X-Xsrftoken = "redact"
+
+[entryPoints]
+[entryPoints.http]
+address = ":9000"
+
+[entryPoints.http.transport.respondingTimeouts]
+idleTimeout = "10m"
+
+[entryPoints.http.http.redirections.entryPoint]
+to = "https"
+scheme = "https"
+
+[entryPoints.https]
+address = ":9443"
+
+[entryPoints.https.http.tls]
+options = "default"
+
+[entryPoints.https.transport.respondingTimeouts]
+idleTimeout = "10m"
+
+[entryPoints.auth_api]
+address = "localhost:9001"
+
+[certificatesResolvers.letsencrypt.acme]
+email = "minrk@berkeley.edu"
+storage = "acme.json"
+# staging while we work this out
+caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+[certificatesResolvers.letsencrypt.acme.tlsChallenge]
+
+[providers]
+providersThrottleDuration = "0s"
+
+[providers.file]
+directory = "/opt/jupyterhub/traefik/dynamic"
+watch = true

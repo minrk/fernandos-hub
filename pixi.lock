@@ -64,8 +64,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.25.1-he01879c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter_events-0.12.0-pyh29332c3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-5.4.1-h6ff46e5_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.1-pyhc90fa1f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-5.4.2-h0b4b229_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.2-pyhc90fa1f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-traefik-proxy-2.1.0-pyh29332c3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/krb5-1.21.3-h237132a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lark-1.3.1-pyhd8ed1ab_0.conda
@@ -232,7 +232,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter_server_terminals-0.5.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter_server_ydoc-2.1.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter_ydoc-3.1.0-pyhe01879c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.1-pyhc90fa1f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.2-pyhc90fa1f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.4.10-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.17.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_code_formatter-3.0.2-pyhd8ed1ab_1.conda
@@ -1570,23 +1570,23 @@ packages:
   license_family: BSD
   size: 99866
   timestamp: 1751437224889
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-5.4.1-h6ff46e5_0.conda
-  sha256: b5bebd9e945b011dcc7699a1d1b395ddadfce0c6758ddacd5acf2fe3a172e18e
-  md5: 3b1b8cb9ef58d2026d03f11805222b7a
+- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-5.4.2-h0b4b229_0.conda
+  sha256: 6641b8d465c7a84de86be337f8bfd735cc4d3b301d9b0f0d190c09a8238b56a7
+  md5: ee0ec16b6ce4f61b54973b640308e7cc
   depends:
   - __unix
-  - jupyterhub-base ==5.4.1 pyhc90fa1f_0
+  - jupyterhub-base ==5.4.2 pyhc90fa1f_0
   - configurable-http-proxy >=4
   - nodejs >=12
   - psutil
   - pycurl
   license: BSD-3-Clause
   license_family: BSD
-  size: 7667
-  timestamp: 1760719185160
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.1-pyhc90fa1f_0.conda
-  sha256: 6250090294347873036c85fb14f46d6cfe4572265c02ec6ca88bc5f484d6293c
-  md5: e42316ed3cc7d90f69a5c06f3633df89
+  size: 7678
+  timestamp: 1761344970769
+- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.2-pyhc90fa1f_0.conda
+  sha256: 81f3ffc144e5ff2e9da18391db0dea2ca4f0e4eab45f1e1d5f6cbe302fdd0cde
+  md5: f2c9db03018cd764e7ec551a77f632e1
   depends:
   - __unix
   - alembic >=1.4
@@ -1611,8 +1611,8 @@ packages:
   - pamela >=1.1.0
   license: BSD-3-Clause
   license_family: BSD
-  size: 5227304
-  timestamp: 1760719185154
+  size: 5227198
+  timestamp: 1761344970764
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-traefik-proxy-2.1.0-pyh29332c3_0.conda
   sha256: b123233f550ef7ff0b0037877893328ec7c3621ff329935c681c4a9166758c38
   md5: 67532dddb5993cd24b1b79ac3a84ba17
