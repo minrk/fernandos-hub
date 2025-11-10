@@ -66,7 +66,7 @@ c.JupyterHub.public_url = "https://longs.stat.berkeley.edu"
 c.Authenticator.allow_all = True
 
 c.Spawner.cmd = [
-    "pixi",
+    "/opt/homebrew/bin/pixi",
     "run",
     "--manifest-path",
     str(install_path),
