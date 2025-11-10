@@ -1,0 +1,39 @@
+[workspace]
+authors = ["Min RK <benjaminrk@gmail.com>"]
+channels = ["conda-forge/label/jupyter-ai_rc", "conda-forge"]
+name = "fernando-hub"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+
+# shared dependencies across hub and user
+# not 'default' because we might have tasks
+[feature.common.dependencies]
+jupyterhub-base = "5.4.*"
+
+# Hub environment
+[feature.hub.dependencies]
+jupyterhub-traefik-proxy = "*"
+
+# User environment
+[feature.user.dependencies]
+jupyterlab = "*"
+jupyter-ai = ">=3.0.0b7"
+ipywidgets = "*"
+altair = "*"
+jupyter-collaboration = "*"
+ruff = "*"
+jupyterlab_code_formatter = "*"
+pre-commit = "*"
+matplotlib-base = "*"
+scipy = "*"
+uv = "*"
+
+
+[environments]
+user = ["user", "common"]
+hub = ["hub", "common"]
