@@ -68,6 +68,7 @@ c.Authenticator.allow_all = True
 c.Spawner.cmd = [
     "/opt/homebrew/bin/pixi",
     "run",
+    "--as-is",
     "--manifest-path",
     str(install_path),
     "-e",
