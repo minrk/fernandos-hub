@@ -15,6 +15,8 @@ reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.h
   "update-daemons",
 ] }
 setup-logs = "sudo mkdir -p /Library/Logs/jupyterhub/traefik; sudo chown -R _traefik:admin /Library/Logs/jupyterhub/traefik"
+permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt/jupyterhub/.pixi/envs; sudo chmod -R g+rw /opt/jupyterhub/; sudo chown -R root:admin /Library/Logs/jupyterhub; sudo chmod g+rX /Library/Logs/jupyterhub"
+
 
 [dependencies]
 
