@@ -75,4 +75,7 @@ c.Spawner.cmd = [
     "jupyterhub-singleuser",
 ]
 
+# use login shell
+c.LocalProcessSpawner.shell_cmd = ["bash", "-l", "-c"]
+
 c.JupyterHub.log_level = 10
