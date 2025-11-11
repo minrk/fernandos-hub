@@ -14,6 +14,7 @@ update-daemons = "sudo cp -v LaunchDaemons/*.plist /Library/LaunchDaemons/"
 reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.hub.*.plist; do echo reloading $f; sudo launchctl unload $f; sudo launchctl load $f; done'", depends-on = [
   "update-daemons",
 ] }
+restart-daemons = "sh -c 'for name in $(sudo launchctl list | grep org.jupyter.hub | cut -f 3); do echo restarting $name; sudo launchctl kickstart -k $name; done'"
 setup-logs = "sudo mkdir -p /Library/Logs/jupyterhub/traefik; sudo chown -R _traefik:admin /Library/Logs/jupyterhub/traefik"
 permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt/jupyterhub/.pixi/envs; sudo chmod -R g+rw /opt/jupyterhub/; sudo chown -R root:admin /Library/Logs/jupyterhub; sudo chmod g+rX /Library/Logs/jupyterhub"
 
