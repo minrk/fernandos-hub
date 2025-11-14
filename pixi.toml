@@ -5,6 +5,8 @@ name = "fernando-hub"
 platforms = ["osx-arm64"]
 version = "0.1.0"
 
+[system-requirements]
+macos = "25.0"
 
 [tasks]
 update-daemons = "sudo cp -v LaunchDaemons/*.plist /Library/LaunchDaemons/"
@@ -13,7 +15,10 @@ reload-daemons = { cmd = "bash -c 'for f in /Library/LaunchDaemons/org.jupyter.h
 ] }
 restart-daemons = "sh -c 'for name in $(sudo launchctl list | grep org.jupyter.hub | cut -f 3); do echo restarting $name; sudo launchctl kickstart -k system/$name; done'"
 setup-logs = "sudo mkdir -p /Library/Logs/jupyterhub/traefik; sudo chown -R _traefik:admin /Library/Logs/jupyterhub/traefik"
-permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt/jupyterhub/.pixi/envs; sudo chmod -R g+rw /opt/jupyterhub/; sudo chown -R root:admin /Library/Logs/jupyterhub; sudo chmod g+rX /Library/Logs/jupyterhub"
+install = "pixi install -a"
+permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt/jupyterhub/.pixi/envs; sudo chmod -R g+rw /opt/jupyterhub/; sudo chmod 0600 /opt/jupyterhub/traefik/acme.json; sudo chown -R root:admin /Library/Logs/jupyterhub; sudo chmod g+rX /Library/Logs/jupyterhub"
+[tasks.update-envs]
+depends-on = ["install", "permissions"]
 
 [feature.hub.tasks]
 jupyterhub = { cmd = ["jupyterhub"], cwd = "jupyterhub" }
@@ -46,6 +51,8 @@ pre-commit = "*"
 matplotlib-base = "*"
 scipy = "*"
 uv = "*"
+ollama = "*"
+mlx-lm = "*"
 
 
 [environments]
