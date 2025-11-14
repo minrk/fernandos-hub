@@ -61,21 +61,24 @@ c.TraefikFileProviderProxy.dynamic_config_file = str(
 # public URL of this Hub
 c.JupyterHub.public_url = "https://longs.stat.berkeley.edu"
 
-# allowed users (allow all?)
-# for now: allow any PAM user
-c.Authenticator.allow_all = True
+# Authenticator setup
+c.JupyterHub.authenticator_class = "local-github"
+c.GitHubOAuthenticator.client_id = "Ov23liHQyt7EfrqR89xm"
+with (secrets_dir / "client_secret").open() as f:
+    c.GitHubOAuthenticator.client_secret = f.read()
 
-c.Spawner.cmd = [
-    "/opt/homebrew/bin/pixi",
-    "run",
-    "--as-is",
-    "--manifest-path",
-    str(install_path),
-    "-e",
-    "user",
-    "jupyterhub-singleuser",
-]
-
+# only allow usernames from config
+c.Authenticator.allow_existing_users = False
+c.GitHubOAuthenticator.allowed_users = {
+    "fperez",
+    "minrk",
+}
+c.GitHubOAuthenticator.admin_users = {
+    "fperez",
+    "minrk",
+}
+# map github username to local system username, if different
+c.Authenticator.username_map = {}
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
 

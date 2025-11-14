@@ -31,6 +31,7 @@ jupyterhub-base = "5.4.*"
 # Hub environment
 [feature.hub.dependencies]
 jupyterhub-traefik-proxy = "*"
+oauthenticator = "*"
 
 # User environment
 [feature.user.dependencies]

@@ -71,6 +71,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/multidict-6.6.3-py312hdb8e49c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ncurses-6.5-h5e97a16_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/nodejs-24.4.1-hab9d20b_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/oauthenticator-17.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oauthlib-3.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.5.4-h5503f6c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -97,6 +98,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/rfc3986-validator-0.1.1-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/rfc3987-syntax-1.1.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rpds-py-0.28.0-py312h6ef9ec0_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml-0.18.16-py312h4409184_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml.clib-0.2.14-py312h4409184_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/sqlalchemy-2.0.44-py312h4409184_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-h892fb3f_2.conda
@@ -2386,6 +2389,22 @@ packages:
   license_family: BSD
   size: 6662666
   timestamp: 1761161608043
+- conda: https://conda.anaconda.org/conda-forge/noarch/oauthenticator-17.3.0-pyhd8ed1ab_0.conda
+  sha256: 2fc77b46442da4bd19236cfce24a370a470660e79eff36ab4492456596988cac
+  md5: c4d9d142b62e7ea2348618d45d404cb0
+  depends:
+  - jsonschema
+  - jupyterhub >=2.2
+  - pyjwt >=2
+  - python >=3.8
+  - requests
+  - ruamel.yaml
+  - tornado
+  - traitlets
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 61398
+  timestamp: 1734114348089
 - conda: https://conda.anaconda.org/conda-forge/noarch/oauthlib-3.3.1-pyhd8ed1ab_0.conda
   sha256: dfa8222df90736fa13f8896f5a573a50273af8347542d412c3bd1230058e56a5
   md5: d4f3f31ee39db3efecb96c0728d4bdbf
@@ -3010,6 +3029,31 @@ packages:
   license_family: MIT
   size: 354400
   timestamp: 1761178471707
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml-0.18.16-py312h4409184_0.conda
+  sha256: a7d944ed52656ff0ae85199bb1fe152298ab9613daca4d83653fc12a3c9f2ebf
+  md5: 1672b251b3ef1ea8d1c36450d5a5cd54
+  depends:
+  - __osx >=11.0
+  - python >=3.12,<3.13.0a0
+  - python >=3.12,<3.13.0a0 *_cpython
+  - python_abi 3.12.* *_cp312
+  - ruamel.yaml.clib >=0.1.2
+  license: MIT
+  license_family: MIT
+  size: 270195
+  timestamp: 1761161065046
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml.clib-0.2.14-py312h4409184_0.conda
+  sha256: 6e3b59e64c26f62562834752476b7308e72b9aada1a85ee98d3b57c4f7ab9139
+  md5: 701d9a8bcd57c5221df9b2384a6aef93
+  depends:
+  - __osx >=11.0
+  - python >=3.12,<3.13.0a0
+  - python >=3.12,<3.13.0a0 *_cpython
+  - python_abi 3.12.* *_cp312
+  license: MIT
+  license_family: MIT
+  size: 116030
+  timestamp: 1760564523506
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ruff-0.14.4-h382de68_0.conda
   noarch: python
   sha256: a672c1310b844f32495d62a4db0d1fd0ac1cd154839425f0f3ff64c95c01356d
