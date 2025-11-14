@@ -8,13 +8,11 @@
 	<string>org.jupyter.hub.jupyterhub</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/opt/jupyterhub/.pixi/envs/hub/bin/jupyterhub</string>
+		<string>/opt/jupyterhub/jupyterhub/start-jupyterhub.sh</string>
 	</array>
-	<key>StandardErrorPath</key>
-	<string>/Library/Logs/jupyterhub/jupyterhub.log</string>
 	<key>StandardOutPath</key>
-	<string>/Library/Logs/jupyterhub/jupyterhub.out.log</string>
+	<string>/Library/Logs/jupyterhub/jupyterhub.log</string>
 	<key>WorkingDirectory</key>
-	<string>/opt/jupyterhub/jupyterhub</string>
+	<string>/opt/jupyterhub</string>
 </dict>
 </plist>

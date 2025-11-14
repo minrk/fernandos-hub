@@ -8,15 +8,11 @@
 	<string>org.jupyter.hub.traefik</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/opt/jupyterhub/.pixi/envs/hub/bin/traefik</string>
-		<string>--configfile</string>
-		<string>/opt/jupyterhub/traefik/traefik.toml</string>
+		<string>/opt/jupyterhub/traefik/start-traefik.sh</string>
 	</array>
-	<key>StandardErrorPath</key>
-	<string>/Library/Logs/jupyterhub/traefik/traefik.err.log</string>
 	<key>StandardOutPath</key>
-	<string>/Library/Logs/jupyterhub/traefik/traefik.log</string>
+	<string>/Library/Logs/jupyterhub/traefik.log</string>
 	<key>WorkingDirectory</key>
-	<string>/opt/jupyterhub/traefik</string>
+	<string>/opt/jupyterhub</string>
 </dict>
 </plist>

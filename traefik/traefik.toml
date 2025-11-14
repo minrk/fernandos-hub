@@ -13,7 +13,7 @@ noColor = true
 format = "json"
 
 [accessLog.filters]
-statusCodes = ["500-999"]
+statusCodes = ["200-999"]
 
 [accessLog.fields.headers.names]
 Authorization = "redact"
