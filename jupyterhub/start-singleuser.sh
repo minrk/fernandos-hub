@@ -5,8 +5,10 @@ set -e
 exec 2>&1
 
 export PYTHONUNBUFFERED=1
-# activate with shell-hook to avoid creating subprocesses that don't get killed signaled properly
+# activate with shell hook
 # don't use pixi shell-hook activation, which sets environment variables we don't want the user to inherit
-eval $(mamba shell hook)
-mamba activate /opt/jupyterhub/.pixi/envs/user
+source /opt/conda/etc/profile.d/conda.sh
+source /opt/conda/etc/profile.d/mamba.sh
+# use conda activation because mamba 2 activation is broken
+conda activate /opt/jupyterhub/.pixi/envs/user
 exec jupyterhub-singleuser "$@"
