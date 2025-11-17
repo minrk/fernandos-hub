@@ -41,7 +41,6 @@ oauthenticator = "*"
 # User environment
 [feature.user.dependencies]
 jupyterlab = "*"
-jupyter-ai = ">=3.0.0b7"
 ipywidgets = "*"
 altair = "*"
 jupyter-collaboration = "*"
@@ -51,8 +50,15 @@ pre-commit = "*"
 matplotlib-base = "*"
 scipy = "*"
 uv = "*"
+# model runners
 ollama = "*"
 mlx-lm = "*"
+
+[feature.user.pypi-dependencies]
+# prerelase jupyter-ai stuff
+jupyter-ai = ">=3.0.0b9"
+jupyterlab-chat = ">=0.19.0a0"
+jupyter-server-mcp = "*"
 
 
 [environments]
