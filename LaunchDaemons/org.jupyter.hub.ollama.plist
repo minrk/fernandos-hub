@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>org.jupyter.hub.ollama</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/jupyterhub/models/start-ollama.sh</string>
+	</array>
+	<key>StandardOutPath</key>
+	<string>/Library/Logs/llm/ollama.log</string>
+	<key>UserName</key>
+	<string>_llm</string>
+	<key>WorkingDirectory</key>
+	<string>/opt/jupyterhub</string>
+</dict>
+</plist>

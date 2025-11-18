@@ -82,4 +82,8 @@ c.Authenticator.username_map = {}
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
 
+c.Spawner.environment = {
+    "HF_HOME": "/opt/huggingface",
+    "OLLAMA_MODELS": "/opt/ollama",
+}
 c.JupyterHub.log_level = 10

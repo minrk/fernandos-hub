@@ -38,7 +38,7 @@ dscl . -create /Groups/_$username_ RealName $realname_
 dscl . -create /Groups/_$username_ Password \*
 
 dscl . -create /Users/_$username_
-dscl . -create /Users/_$username_ NFSHomeDirectory /xpt/local/apache2/wsgi/api
+dscl . -create /Users/_$username_ NFSHomeDirectory /opt/jupyterhub
 dscl . -create /Users/_$username_ Password \*
 dscl . -create /Users/_$username_ PrimaryGroupID $uid_
 dscl . -create /Users/_$username_ RealName $realname_
