@@ -78,6 +78,7 @@ c.GitHubOAuthenticator.admin_users = {
     "fperez",
     "minrk",
     "ryanlovett",
+    "paciorek",
 }
 # map github username to local system username, if different
 c.Authenticator.username_map = {}
