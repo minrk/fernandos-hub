@@ -72,10 +72,12 @@ c.Authenticator.allow_existing_users = False
 c.GitHubOAuthenticator.allowed_users = {
     "fperez",
     "minrk",
+    "ryanlovett",
 }
 c.GitHubOAuthenticator.admin_users = {
     "fperez",
     "minrk",
+    "ryanlovett",
 }
 # map github username to local system username, if different
 c.Authenticator.username_map = {}
