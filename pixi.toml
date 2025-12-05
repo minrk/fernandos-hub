@@ -18,8 +18,10 @@ setup-logs = "sudo mkdir -p /Library/Logs/jupyterhub/traefik; sudo chown -R _tra
 install = "pixi install -a"
 permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt/jupyterhub/.pixi/envs; sudo chmod -R g+rw /opt/jupyterhub/; sudo chmod 0600 /opt/jupyterhub/traefik/acme.json; "
 logs-permissions = "sudo mkdir -p /Library/Logs/jupyterhub /Library/Logs/llm; sudo chgrp -R admin /Library/Logs/jupyterhub /Library/Logs/llm; sudo chmod g+rX /Library/Logs/jupyterhub /Library/Logs/llm; sudo chown -R _llm /Library/Logs/llm"
+update-server-config = "ln -sf $PWD/jupyterhub/jupyter_server_config.py .pixi/envs/user/etc/jupyter/jupyter_server_config.py"
+
 [tasks.update-envs]
-depends-on = ["install", "permissions"]
+depends-on = ["install", "permissions", "update-server-config"]
 
 [feature.hub.tasks]
 jupyterhub = { cmd = ["jupyterhub"], cwd = "jupyterhub" }
