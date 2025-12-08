@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>org.jupyter.hub.healthcheck</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/jupyterhub/jupyterhub/start-healthcheck.sh</string>
+	</array>
+	<key>StandardOutPath</key>
+	<string>/Library/Logs/jupyterhub/healthcheck.log</string>
+	<key>WorkingDirectory</key>
+	<string>/opt/jupyterhub</string>
+</dict>
+</plist>

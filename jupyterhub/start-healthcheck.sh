@@ -6,6 +6,6 @@ exec 2>&1
 export PYTHONUNBUFFERED=1
 export PATH=/opt/homebrew/bin:$PATH
 
-cd /opt/jupyterhub/jupyterhub
-# launch jupyterhub
-exec pixi run --as-is --environment=hub jupyterhub
+cd /opt/jupyterhub
+# launch healthcheck
+exec pixi run --as-is --environment=healthcheck healthcheck

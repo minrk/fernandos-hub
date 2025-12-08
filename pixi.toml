@@ -27,11 +27,18 @@ depends-on = ["install", "permissions", "update-server-config"]
 jupyterhub = { cmd = ["jupyterhub"], cwd = "jupyterhub" }
 proxy = { cmd = ["traefik", "--configfile=traefik.toml"], cwd = "traefik" }
 
+[feature.health.tasks]
+healthcheck = { cmd = ["python3", "healthcheck.py"] }
 
 [dependencies]
 
+[feature.health.dependencies]
+python = "3.12.*"
+httpx = "*"
+
 # shared dependencies across hub and user
 # not 'default' because we might have tasks
+# without dependencies
 [feature.common.dependencies]
 python = "3.12.*"
 jupyterhub-base = "5.4.*"
@@ -72,3 +79,4 @@ jupyterlab-commands-toolkit = { version = "*", extras = ["mcp"] }
 [environments]
 user = ["user", "common"]
 hub = ["hub", "common"]
+healthcheck = ["health"]
