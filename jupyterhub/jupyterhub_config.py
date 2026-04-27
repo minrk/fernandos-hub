@@ -137,4 +137,4 @@ c.JupyterHub.load_roles = [
 ]
 
 # default to /hub/home because some users can't start their own servers
-c.JupyterHub.default_url = "/hub/home/"
+c.JupyterHub.default_url = "/hub/home"
