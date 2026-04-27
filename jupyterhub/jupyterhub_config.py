@@ -73,7 +73,6 @@ c.Authenticator.allow_existing_users = False
 # map github username to local system username, if different
 c.Authenticator.username_map = username_map = {}
 
-
 c.GitHubOAuthenticator.allowed_users = {
     "fperez",
     "fperezhub",
@@ -82,6 +81,7 @@ c.GitHubOAuthenticator.allowed_users = {
     "paciorek",
     "mfisher87",
     "tsnow03",
+    "cassiebuhler",
 }
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
@@ -132,6 +132,7 @@ c.JupyterHub.load_roles = [
             "fperez",
             "mfisher87",
             "tsnow03",
+            "cassiebuhler",
         ],
     },
 ]
