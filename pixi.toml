@@ -22,6 +22,9 @@ update-server-config = "ln -sf $PWD/jupyterhub/jupyter_server_config.py .pixi/en
 
 [feature.user.tasks]
 opencode-config = { cmd = "opencode/configure-opencode" }
+# workaround Error: MLX not available: failed to load MLX dynamic library
+# setting OLLAMA_LIBRARY_PATH doesn't work
+fix-ollama = { cmd = "ln -s $CONDA_PREFIX/lib/libmlx.dylib $CONDA_PREFIX/bin/" }
 
 [tasks.update-envs]
 depends-on = ["install", "permissions", "update-server-config"]
