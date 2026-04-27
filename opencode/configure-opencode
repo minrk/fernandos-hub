@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 
 import ollama
+from mlx_lm.manage import scan_cache_dir
 
 CONFIG_FILE = Path(
     os.environ.get("OPENCODE_CONFIG", "/opt/jupyterhub/opencode/opencode.json")
@@ -21,7 +22,7 @@ CONFIG = {
     "$schema": "https://opencode.ai/config.json",
     "provider": {},
     # default model:
-    "model": "ollama/qwen3.6:27b-coding-nvfp4",
+    "model": "mlx_lm/mlx-community/Qwen3.6-35B-A3B-nvfp4",
     # disable hosted opencode
     "disabled_providers": ["opencode"],
 }
@@ -53,9 +54,28 @@ def ollama_provider():
     return provider
 
 
+def mlx_lm_provider():
+    provider = {
+        "npm": OPENAI_COMPATIBLE,
+        "name": "MLX LM",
+        "options": {"baseURL": "http://localhost:8080/v1"},
+        "models": {},
+    }
+    for repo in scan_cache_dir().repos:
+        model_id = repo.repo_id
+        if repo.repo_type != "model":
+            continue
+        provider["models"][model_id] = {
+            "name": model_id.rpartition("/")[-1],
+            "tools": True,
+        }
+    return provider
+
+
 def main():
     config = copy.deepcopy(CONFIG)
     config["provider"]["ollama"] = ollama_provider()
+    config["provider"]["mlx_lm"] = mlx_lm_provider()
     with CONFIG_FILE.open("w") as f:
         json.dump(config, f, sort_keys=True, indent=1)
         f.write("\n")
