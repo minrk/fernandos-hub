@@ -69,19 +69,28 @@ with (secrets_dir / "client_secret").open() as f:
 
 # only allow usernames from config
 c.Authenticator.allow_existing_users = False
-c.GitHubOAuthenticator.allowed_users = {
-    "fperez",
-    "minrk",
-    "ryanlovett",
+
+# Let Fernando login as fperezhub for demos
+fperez_user = "fperezhub"
+
+# map github username to local system username, if different
+c.Authenticator.username_map = username_map = {
+    "fperez": fperez_user,
 }
-c.GitHubOAuthenticator.admin_users = {
-    "fperez",
+
+
+c.GitHubOAuthenticator.allowed_users = {
+    username_map.get("fperez", "fperez"),
     "minrk",
     "ryanlovett",
     "paciorek",
 }
-# map github username to local system username, if different
-c.Authenticator.username_map = {}
+c.GitHubOAuthenticator.admin_users = {
+    username_map.get("fperez", "fperez"),
+    "minrk",
+    "ryanlovett",
+    "paciorek",
+}
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
 
