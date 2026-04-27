@@ -1,6 +1,6 @@
 [workspace]
 authors = ["Min RK <benjaminrk@gmail.com>"]
-channels = ["conda-forge/label/jupyter-ai_rc", "conda-forge"]
+channels = ["conda-forge"]
 name = "fernando-hub"
 platforms = ["osx-arm64"]
 version = "0.1.0"
@@ -63,17 +63,20 @@ uv = "*"
 # model runners
 ollama = "*"
 mlx-lm = "*"
+vllm = "*"
 ollama-python = "*"
-
-[feature.user.pypi-dependencies]
 # needed for gpt-oss parser
 openai-harmony = "*"
-# prerelease jupyter-ai stuff
-jupyter-ai = ">=3.0.0b9"
-jupyterlab-chat = ">=0.19.0a0"
-jupyter-ai-tools = "*"
-jupyter-server-mcp = "*"
-jupyterlab-commands-toolkit = { version = "*", extras = ["mcp"] }
+# vllm-metal dependencies
+mlx-vlm = "*"
+accelerate = "*"
+
+# jupyter-ai
+jupyter-ai = "3.*"
+
+[feature.user.pypi-dependencies]
+# vllm metal plugin (only has wheel for cp312)
+vllm-metal = "*"
 
 
 [environments]
