@@ -81,6 +81,9 @@ accelerate = "*"
 # jupyter-ai
 jupyter-ai = "3.*"
 
+[feature.user.pypi-dependencies]
+jupyter-geoagent = { git = "https://github.com/geojupyter/jupyter-geoagent" }
+
 # [feature.user.pypi-dependencies]
 # vllm metal plugin (only has wheel for cp312)
 # vllm-metal = "*"
