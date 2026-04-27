@@ -82,6 +82,7 @@ c.GitHubOAuthenticator.allowed_users = {
     "mfisher87",
     "tsnow03",
     "cassiebuhler",
+    "cboettig",
 }
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
@@ -95,15 +96,6 @@ c.Spawner.environment = {
 c.JupyterHub.log_level = 10
 
 # shared access to the `fperezhub` user
-
-c.JupyterHub.load_groups = {
-    "fperezhub": [
-        "minrk",
-        "fperez",
-        "mfisher87",
-        "tsnow03",
-    ],
-}
 
 c.JupyterHub.load_roles = [
     {
@@ -133,6 +125,7 @@ c.JupyterHub.load_roles = [
             "mfisher87",
             "tsnow03",
             "cassiebuhler",
+            "cboettig",
         ],
     },
 ]
