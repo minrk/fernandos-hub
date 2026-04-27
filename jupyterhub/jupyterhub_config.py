@@ -97,5 +97,7 @@ c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
 c.Spawner.environment = {
     "HF_HOME": "/opt/huggingface",
     "OLLAMA_MODELS": "/opt/ollama",
+    "OPENCODE_CONFIG_DIR": "/opt/jupyterhub/opencode",
+    "OPENCODE_CONFIG": "/opt/jupyterhub/opencode/opencode.json",
 }
 c.JupyterHub.log_level = 10

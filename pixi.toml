@@ -20,6 +20,9 @@ permissions = "sudo chown -R root:admin /opt/jupyterhub; sudo chmod -R a+rX /opt
 logs-permissions = "sudo mkdir -p /Library/Logs/jupyterhub /Library/Logs/llm; sudo chgrp -R admin /Library/Logs/jupyterhub /Library/Logs/llm; sudo chmod g+rX /Library/Logs/jupyterhub /Library/Logs/llm; sudo chown -R _llm /Library/Logs/llm"
 update-server-config = "ln -sf $PWD/jupyterhub/jupyter_server_config.py .pixi/envs/user/etc/jupyter/jupyter_server_config.py"
 
+[feature.user.tasks]
+opencode-config = { cmd = "opencode/configure-opencode" }
+
 [tasks.update-envs]
 depends-on = ["install", "permissions", "update-server-config"]
 

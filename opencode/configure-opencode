@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+"""
+generate opencode configuration from available local models
+
+for now: only ollama
+"""
+
+import copy
+import json
+import os
+from pathlib import Path
+
+import ollama
+
+CONFIG_FILE = Path(
+    os.environ.get("OPENCODE_CONFIG", "/opt/jupyterhub/opencode/opencode.json")
+)
+
+# base config
+CONFIG = {
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {},
+    # default model:
+    "model": "ollama/qwen3.6:27b-coding-nvfp4",
+    # disable hosted opencode
+    "disabled_providers": ["opencode"],
+}
+
+OPENAI_COMPATIBLE = "@ai-sdk/openai-compatible@2.0.41"
+
+
+def ollama_provider():
+    """Construct ollama provider from currently available models"""
+    provider = {
+        "npm": OPENAI_COMPATIBLE,
+        "name": "Ollama",
+        "options": {"baseURL": "http://localhost:11434/v1"},
+        "models": {},
+    }
+    models = provider["models"]
+    # load all the models
+    for model in ollama.list().models:
+        if "latest" in model:
+            # skip latest? Not for now
+            pass
+        model_name = model.model
+        show = ollama.show(model_name)
+        details = show.details
+        models[model_name] = {
+            "name": f"{details.family} {details.parameter_size}",
+            "tools": "tools" in show.capabilities,
+        }
+    return provider
+
+
+def main():
+    config = copy.deepcopy(CONFIG)
+    config["provider"]["ollama"] = ollama_provider()
+    with CONFIG_FILE.open("w") as f:
+        json.dump(config, f, sort_keys=True, indent=1)
+        f.write("\n")
+
+
+if __name__ == "__main__":
+    main()

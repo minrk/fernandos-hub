@@ -214,3 +214,4 @@ secrets/**
 
 jupyterhub.sqlite
 jupyterhub_cookie_secret
+opencode/opencode.json
