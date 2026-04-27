@@ -80,12 +80,8 @@ c.GitHubOAuthenticator.allowed_users = {
     "minrk",
     "ryanlovett",
     "paciorek",
-}
-c.GitHubOAuthenticator.admin_users = {
-    "fperez",
-    "minrk",
-    "ryanlovett",
-    "paciorek",
+    "mfisher87",
+    "tsnow03",
 }
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
@@ -97,3 +93,48 @@ c.Spawner.environment = {
     "OPENCODE_CONFIG": "/opt/jupyterhub/opencode/opencode.json",
 }
 c.JupyterHub.log_level = 10
+
+# shared access to the `fperezhub` user
+
+c.JupyterHub.load_groups = {
+    "fperezhub": [
+        "minrk",
+        "fperez",
+        "mfisher87",
+        "tsnow03",
+    ],
+}
+
+c.JupyterHub.load_roles = [
+    {
+        # populate admin role rather than admin_users
+        # that way, we can revoke permission in config,
+        # rather than only granting
+        "name": "admin",
+        "users": [
+            "fperez",
+            "ryanlovett",
+            "minrk",
+            "paciorek",
+        ],
+    },
+    {
+        "name": "fperezhub",
+        "scopes": [
+            "admin-ui",
+            "list:users!user=fperezhub",
+            "read:users!user=fperezhub",
+            "servers!user=fperezhub",
+            "access:servers!user=fperezhub",
+        ],
+        "users": [
+            "minrk",
+            "fperez",
+            "mfisher87",
+            "tsnow03",
+        ],
+    },
+]
+
+# default to /hub/home because some users can't start their own servers
+c.JupyterHub.default_url = "/hub/home/"
