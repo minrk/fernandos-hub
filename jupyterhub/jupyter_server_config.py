@@ -1,8 +1,11 @@
+import os
+
 import ollama
 from mlx_lm.manage import scan_cache_dir
 
 c = get_config()  # noqa
 
+# FIXME: this config is for Jupyter AI v2
 ai_cfg = c.JupyternautExtension
 
 # set api_base on all mlx models
@@ -24,4 +27,8 @@ ai_cfg.initial_language_model = "ollama/gpt-oss:120b"
 for model in ollama.list().models:
     ai_cfg.model_parameters[f"ollama/{model.model}"] = {}
 
-# embeddings and completions?
+
+# mcp server port conflict
+# since we have a small number of users, pick a block of ports
+mcp_port_offset = 10_000
+c.MCPExtensionApp.mcp_port = mcp_port_offset + os.getuid()
