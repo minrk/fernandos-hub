@@ -80,6 +80,9 @@ accelerate = "*"
 
 # jupyter-ai
 jupyter-ai = "3.*"
+jupyterlab-myst = ">=2.6.0,<3"
+mystmd = ">=1.8.3,<2"
+jupyter_server_documents = ">=0.2.0,<0.3"
 
 [feature.user.pypi-dependencies]
 jupyter-geoagent = { git = "https://github.com/geojupyter/jupyter-geoagent" }
