@@ -22,7 +22,7 @@ CONFIG = {
     "$schema": "https://opencode.ai/config.json",
     "provider": {},
     # default model:
-    "model": "mlx_lm/mlx-community/Qwen3.6-35B-A3B-nvfp4",
+    "model": "ollama/gemma4:26b-nvfp4",
     # disable hosted opencode
     "disabled_providers": ["opencode"],
 }
@@ -46,9 +46,9 @@ def ollama_provider():
             pass
         model_name = model.model
         show = ollama.show(model_name)
-        details = show.details
+        # details = show.details
         models[model_name] = {
-            "name": f"{details.family} {details.parameter_size}",
+            "name": model_name,
             "tools": "tools" in show.capabilities,
         }
     return provider
