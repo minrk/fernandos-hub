@@ -282,7 +282,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/gmp-6.3.0-h7bae524_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/gmpy2-2.3.0-py312he1ee7cc_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.14-hec049ff_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/greenlet-3.4.0-py312h6510ced_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/greenlet-3.5.0-py312h6510ced_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h11-0.16.0-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.3.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/harfbuzz-14.2.0-h3103d1b_0.conda
@@ -316,7 +316,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/json5-0.14.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonpointer-3.1.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.26.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-path-0.4.5-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-path-0.4.6-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-3.0.0-pyhcf101f3_0.conda
@@ -456,10 +456,11 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.2.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mcp-1.22.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mdurl-0.1.2-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/miniaudio-1.70-h5547f0e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mistune-3.2.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/mlx-0.31.1-py312h4a03271_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/mlx-lm-0.31.1-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/mlx-vlm-0.4.0-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/mlx-0.31.2-py312h4a03271_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/mlx-lm-0.31.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/mlx-vlm-0.4.4-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/more-itertools-11.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/mpc-1.4.0-h169892a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/mpfr-4.2.2-h6bc93b0_0.conda
@@ -623,7 +624,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/uvicorn-0.46.0-pyhc90fa1f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/uvicorn-standard-0.46.0-hf538af8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/uvloop-0.22.1-py312h4409184_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/virtualenv-21.2.4-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/virtualenv-21.3.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/watchfiles-1.1.1-py312h7a0e18e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/webcolors-25.10.0-pyhd8ed1ab_0.conda
@@ -2266,6 +2267,20 @@ packages:
   - pkg:pypi/greenlet?source=hash-mapping
   size: 259128
   timestamp: 1775679150186
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/greenlet-3.5.0-py312h6510ced_0.conda
+  sha256: c9ace709ecbbcfd6064f69830daaa52c97414bf9d6003db0dc2c8ac80507239b
+  md5: 7104ac8aca96ea7cb28026abc418f53d
+  depends:
+  - python
+  - python 3.12.* *_cpython
+  - __osx >=11.0
+  - libcxx >=19
+  - python_abi 3.12.* *_cp312
+  license: MIT
+  purls:
+  - pkg:pypi/greenlet?source=compressed-mapping
+  size: 258886
+  timestamp: 1777329142205
 - conda: https://conda.anaconda.org/conda-forge/noarch/h11-0.16.0-pyhcf101f3_1.conda
   sha256: 96cac6573fd35ae151f4d6979bab6fbc90cb6b1fb99054ba19eb075da9822fcb
   md5: b8993c19b0c32a2f7b66cbb58ca27069
@@ -2744,9 +2759,9 @@ packages:
   - pkg:pypi/jsonschema?source=hash-mapping
   size: 82356
   timestamp: 1767839954256
-- conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-path-0.4.5-pyhcf101f3_0.conda
-  sha256: 6cb113cf8010f2921c5520b7a0b79591406137633e87e02037c8905260f6233e
-  md5: 2309ff3f983a907e5b3e9d1db076fa5c
+- conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-path-0.4.6-pyhcf101f3_0.conda
+  sha256: 729ef0b3f7cfac353d5bacfcf6dd492cf937f0c534234fc625923268e35215df
+  md5: cc168b7fcf4a70b37fbdb750ae0828b8
   depends:
   - pathable >=0.5.0,<0.6.0
   - python >=3.10
@@ -2755,11 +2770,10 @@ packages:
   - requests >=2.31.0,<3.0.0
   - python
   license: Apache-2.0
-  license_family: APACHE
   purls:
   - pkg:pypi/jsonschema-path?source=hash-mapping
-  size: 26730
-  timestamp: 1772634336518
+  size: 26947
+  timestamp: 1777376717178
 - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
   sha256: 0a4f3b132f0faca10c89fdf3b60e15abb62ded6fa80aebfc007d05965192aa04
   md5: 439cd0f567d697b20a8f45cb70a1005a
@@ -4848,6 +4862,22 @@ packages:
   - pkg:pypi/mdurl?source=hash-mapping
   size: 14465
   timestamp: 1733255681319
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/miniaudio-1.70-h5547f0e_0.conda
+  noarch: python
+  sha256: 8d30f6c5cf2497f85dd4894e2372e1a1f21bacf69ea470b10d447d2bcfcccba3
+  md5: b8bc818f640a955806ca57afd739dac9
+  depends:
+  - python >=3.10
+  - cffi >=1.12.0
+  - libcxx >=19
+  - __osx >=11.0
+  - _python_abi3_support 1.*
+  - cpython >=3.10
+  license: MIT
+  purls:
+  - pkg:pypi/miniaudio?source=compressed-mapping
+  size: 370043
+  timestamp: 1777388330545
 - conda: https://conda.anaconda.org/conda-forge/noarch/mistune-3.2.0-pyhcf101f3_0.conda
   sha256: d3fb4beb5e0a52b6cc33852c558e077e1bfe44df1159eb98332d69a264b14bae
   md5: b11e360fc4de2b0035fc8aaa74f17fd6
@@ -4861,9 +4891,9 @@ packages:
   - pkg:pypi/mistune?source=hash-mapping
   size: 74250
   timestamp: 1766504456031
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/mlx-0.31.1-py312h4a03271_0.conda
-  sha256: aa016f612fa80f98229db7a0fed80ad24ae1cb2256c8772ddc5d5e15024caede
-  md5: 1bfdc9b66e4650585256935ad1327802
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/mlx-0.31.2-py312h4a03271_0.conda
+  sha256: 3d58c82923ddaa7fde9102c1511d7abc37d6363339c50e4bb2704c56537b2f1d
+  md5: 72a6e48d629caf19b3359881c0d81e2a
   depends:
   - python
   - python 3.12.* *_cpython
@@ -4871,17 +4901,16 @@ packages:
   - libcxx >=19
   - python_abi 3.12.* *_cp312
   license: MIT
-  license_family: MIT
   purls:
-  - pkg:pypi/mlx?source=hash-mapping
-  size: 14856017
-  timestamp: 1773290296347
-- conda: https://conda.anaconda.org/conda-forge/noarch/mlx-lm-0.31.1-pyhd8ed1ab_0.conda
-  sha256: 0d354a0a14e9202d0c5db9afadc287795e6860a312be459126b47af7b1bcaf4c
-  md5: 4980b59544b03a3fafe67083db5f1316
+  - pkg:pypi/mlx?source=compressed-mapping
+  size: 15756988
+  timestamp: 1777352245204
+- conda: https://conda.anaconda.org/conda-forge/noarch/mlx-lm-0.31.3-pyhd8ed1ab_0.conda
+  sha256: 22cbfcb0bbe77ea9c88065f05d36951edc7cac6c0f7552b671e0bca929d1c419
+  md5: f40ecf92a759bbd53bb033d70f89e4db
   depends:
   - jinja2
-  - mlx >=0.29.2
+  - mlx >=0.31.2
   - numpy
   - protobuf
   - python >=3.10
@@ -4889,14 +4918,13 @@ packages:
   - sentencepiece
   - transformers >=5.0.0
   license: MIT
-  license_family: MIT
   purls:
   - pkg:pypi/mlx-lm?source=hash-mapping
-  size: 198265
-  timestamp: 1773205753399
-- conda: https://conda.anaconda.org/conda-forge/noarch/mlx-vlm-0.4.0-pyh5ded981_0.conda
-  sha256: e6dc95657fb900e8f68b37d312ed95afdc1a25356c0e11defc11e58202251f4d
-  md5: 8b89c04d2827d494416a10e72315e908
+  size: 207935
+  timestamp: 1777394433599
+- conda: https://conda.anaconda.org/conda-forge/noarch/mlx-vlm-0.4.4-pyh5ded981_0.conda
+  sha256: f9ccc3f88b45bf76a9c58d63ef8021d03b204d151e6ff7223c02835c054618fb
+  md5: 7dfdf4a50fbd196e7b1f01a5f478028b
   depends:
   - python >=3.11
   - mlx >=0.26.0
@@ -4912,13 +4940,14 @@ packages:
   - py-opencv >=4.12.0
   - numpy
   - uvicorn
+  - miniaudio
   - python
   license: MIT
   license_family: MIT
   purls:
   - pkg:pypi/mlx-vlm?source=hash-mapping
-  size: 356017
-  timestamp: 1772920044746
+  size: 544735
+  timestamp: 1775325615880
 - conda: https://conda.anaconda.org/conda-forge/noarch/more-itertools-11.0.2-pyhcf101f3_0.conda
   sha256: 74f7b461e0f0e0709a0c8abb018de9ad885258b74790ffda1e750ac5ddde0a85
   md5: b874955758a30a37c78b82ea5cf78fdb
@@ -7346,9 +7375,9 @@ packages:
   - pkg:pypi/uvloop?source=hash-mapping
   size: 485792
   timestamp: 1762473729988
-- conda: https://conda.anaconda.org/conda-forge/noarch/virtualenv-21.2.4-pyhcf101f3_0.conda
-  sha256: 9a07c52fd7fc0d187c53b527e54ea57d4f46302946fee2f9291d035f4f8984f9
-  md5: 15be1b64e7a4501abb4f740c28ceadaf
+- conda: https://conda.anaconda.org/conda-forge/noarch/virtualenv-21.3.0-pyhcf101f3_0.conda
+  sha256: defaf2bc2a3cf6f1455149531e8be4d03e18eb1d022ffe4f4d964d49bbf0fe34
+  md5: da6e70a64226740cef159121dbe40b95
   depends:
   - python >=3.10
   - distlib >=0.3.7,<1
@@ -7359,11 +7388,10 @@ packages:
   - typing_extensions >=4.13.2
   - python
   license: MIT
-  license_family: MIT
   purls:
   - pkg:pypi/virtualenv?source=compressed-mapping
-  size: 4659433
-  timestamp: 1776247061232
+  size: 5161814
+  timestamp: 1777321763628
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/watchfiles-1.1.1-py312h7a0e18e_0.conda
   sha256: 98c48ebccb9009fb6a77e2d0df834f3ed7f148d4d549d39ea060f467234a70f5
   md5: 4f1ed5d39857625bb1124dbeb1c99840
