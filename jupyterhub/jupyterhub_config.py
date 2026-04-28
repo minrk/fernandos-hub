@@ -71,7 +71,7 @@ with (secrets_dir / "client_secret").open() as f:
 c.Authenticator.allow_existing_users = False
 
 # map github username to local system username, if different
-c.Authenticator.username_map = username_map = {}
+c.Authenticator.username_map = username_map = {"fperez": "fperezhub"}
 
 c.GitHubOAuthenticator.allowed_users = {
     "fperez",
