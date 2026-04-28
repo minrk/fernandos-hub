@@ -83,6 +83,7 @@ c.GitHubOAuthenticator.allowed_users = {
     "tsnow03",
     "cassiebuhler",
     "cboettig",
+    "ellisonbg",
 }
 
 c.Spawner.cmd = ["/opt/jupyterhub/jupyterhub/start-singleuser.sh"]
@@ -126,6 +127,7 @@ c.JupyterHub.load_roles = [
             "tsnow03",
             "cassiebuhler",
             "cboettig",
+            "ellisonbg",
         ],
     },
 ]
