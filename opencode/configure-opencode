@@ -2,7 +2,8 @@
 """
 generate opencode configuration from available local models
 
-for now: only ollama
+For Jupyter AI: only CONFIG.model has any effect,
+the rest are available in opencode terminal sessions.
 """
 
 import copy
@@ -21,7 +22,7 @@ CONFIG_FILE = Path(
 CONFIG = {
     "$schema": "https://opencode.ai/config.json",
     "provider": {},
-    # default model:
+    # default model (this is the only model used by jupyter-ai):
     "model": "ollama/gemma4:26b-nvfp4",
     # disable hosted opencode
     "disabled_providers": ["opencode"],
