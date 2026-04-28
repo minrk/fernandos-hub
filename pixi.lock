@@ -344,6 +344,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.21.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-commands-toolkit-0.1.5-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-favorites-3.5.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-geojson-3.4.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-myst-2.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-notebook-awareness-0.2.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_code_formatter-3.0.3-pyhd8ed1ab_0.conda
@@ -3268,6 +3270,28 @@ packages:
   - pkg:pypi/jupyterlab-eventlistener?source=hash-mapping
   size: 34875
   timestamp: 1763659771677
+- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-favorites-3.5.0-pyhd8ed1ab_0.conda
+  sha256: 7010e80778ab81541f6342fd86937287799b13be91e9fcfa580568dfc5006aee
+  md5: da353c79d63bec6d32e0090e3cb8acd2
+  depends:
+  - python >=3.8,<4.0
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/jupyterlab-favorites?source=hash-mapping
+  size: 29541
+  timestamp: 1770988603707
+- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-geojson-3.4.0-pyhd8ed1ab_1.conda
+  sha256: 59857222b7a7c071135f6a3b15309974867709a864b4569c9e691a8bb14ec9b8
+  md5: 52330b4c11577d4eca2405150867aeb7
+  depends:
+  - python >=3.9
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/jupyterlab-geojson?source=hash-mapping
+  size: 79411
+  timestamp: 1736147290280
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-myst-2.6.0-pyhd8ed1ab_0.conda
   sha256: 9062c0fc60318b654bd902ca3644e2bb39922d8a4cd44917eac3afaab747bd07
   md5: 96ec7389cbc559bdfe07094f0fa1e591
