@@ -208,6 +208,7 @@ __marimo__/
 
 .DS_Store
 acme.json
+traefik/acme*.json
 traefik/dynamic/jupyterhub.toml
 
 secrets/**
