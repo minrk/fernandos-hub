@@ -80,9 +80,6 @@ accelerate = "*"
 
 # jupyter-ai
 jupyter-ai = "3.*"
-# FIXME: pin back jupyterlab-chat
-# waiting for https://github.com/jupyterlab/jupyter-chat/issues/440
-jupyterlab-chat = "0.21.*"
 jupyterlab-myst = ">=2.6.0,<3"
 mystmd = ">=1.8.3,<2"
 jupyter_server_documents = ">=0.2.0,<0.3"
@@ -107,6 +104,8 @@ h5py = ">=3.16.0,<4"
 hdf5 = ">=2.1.0,<3"
 cartopy = ">=0.25.0,<0.26"
 coverage = ">=7.13.5,<8"
+pip = ">=26.1.2,<27"
+conda = ">=26.5.0,<27"
 
 [feature.user.pypi-dependencies]
 jupyter-geoagent = { git = "https://github.com/geojupyter/jupyter-geoagent" }
