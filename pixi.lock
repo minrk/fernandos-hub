@@ -291,7 +291,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter_ydoc-3.4.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-5.4.6-pyhc90fa1f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.5.7-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.22.0-pyhc364b38_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.21.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-commands-toolkit-0.1.6-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-favorites-3.5.0-pyhd8ed1ab_0.conda
@@ -2609,9 +2609,9 @@ packages:
   - pkg:pypi/jupyterlab?source=hash-mapping
   size: 8861204
   timestamp: 1777483115382
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.22.0-pyhc364b38_0.conda
-  sha256: 45e5f9d360d7318d293fde9e77663623638f7ad964cf73dfeceaa06127553f9f
-  md5: b10d59d82b7d4eb24ab9cd3b146e3a8c
+- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.21.1-pyhc364b38_0.conda
+  sha256: 4d9e7fec49433306a2943f9447fe5549452c160a10acdc23dec89120d93e9613
+  md5: 54db05abecea671bfa424c4d8ef0c41f
   depends:
   - python >=3.10
   - jupyter-collaboration >=4,<5
@@ -2623,8 +2623,8 @@ packages:
   license_family: BSD
   purls:
   - pkg:pypi/jupyterlab-chat?source=hash-mapping
-  size: 162764
-  timestamp: 1779134218881
+  size: 160140
+  timestamp: 1775548619876
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-commands-toolkit-0.1.6-pyhcf101f3_0.conda
   sha256: 6194eb2a160d7fa005222ab57ab4b9a412c57206a6fab470e71a4a32e3af0486
   md5: 3b6f597454de19f9f6dc37c900993c97
